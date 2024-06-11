@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://chaw8fkseoijw"]
+
+[ext_resource type="Texture2D" uid="uid://dy11ksn5edsmt" path="res://assets/Fall (32x32).png" id="1_hheqy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxlfe"]
+radius = 10.1053
+height = 25.6
+
+[node name="CharacterBody2D2" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(34, 10)
+scale = Vector2(0.59375, 0.625)
+texture = ExtResource("1_hheqy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(34, 12)
+scale = Vector2(0.59375, 0.625)
+shape = SubResource("CapsuleShape2D_cxlfe")
