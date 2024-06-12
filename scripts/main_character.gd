@@ -10,7 +10,7 @@ var max_time_since_on_floor = 0.1
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var coins_collected = 0
 
-@export var total_coins = 3
+@export var total_coins = 4
 
 
 @onready var coin_label = get_node("/root/Game/CanvasLayer/CoinLabel")
