@@ -81,6 +81,12 @@ func _process(delta):
 		var save_file = FileAccess.open("user://save.data", FileAccess.WRITE)
 		save_file.store_string(score)
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	
+	if Input.is_action_just_pressed("reset"):
+		get_tree().change_scene_to_file("res://scenes/main.tscn")
+	
+	if Input.is_action_just_pressed("mainMenu"):
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _on_coin_collected():
 	coins_collected += 1
