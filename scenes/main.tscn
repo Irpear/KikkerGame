@@ -686,8 +686,8 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="CoinLabel" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(1215, 108)
-scale = Vector2(0.0421875, 0.17037)
+position = Vector2(1216, 72)
+scale = Vector2(1.48849, 1.48377)
 texture = ExtResource("3_f0b1e")
 
 [node name="Player" parent="." instance=ExtResource("3_j23un")]
