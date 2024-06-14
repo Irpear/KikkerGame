@@ -15,12 +15,22 @@ var coins_collected = 0
 
 @onready var coin_label = get_node("/root/Game/CanvasLayer/CoinLabel")
 @onready var timer_label = get_node("/root/Game/CanvasLayer/Panel/Timer")
+@onready var dust = preload("res://scenes/dust.tscn")
 
 @export var score: String = ""
 
 const FLOOR_SNAP_LENGTH = 0.5
 
+var isgrounded = true
+
 func _physics_process(delta):
+	
+	if isgrounded == false and is_on_floor() == true:
+		var instance = dust.instantiate()
+		instance.global_position = $Marker2D.global_position
+		get_parent().add_child(instance)
+	
+	isgrounded = is_on_floor()
 
 	if (velocity.x > 1 || velocity.x < -1):
 		sprite_2d.animation = "running"
